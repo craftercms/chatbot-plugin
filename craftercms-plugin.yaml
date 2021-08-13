@@ -26,25 +26,26 @@ descriptorVersion: 2
 # Describe the plugin
 plugin:
   type: site
-  id: org.craftercms.plugin.chatbot
-  name: Web Chatbot Plugin
+  id: org.craftercms.plugin.cliengo
+  name: Cliengo Plugin
   tags:
     - web
     - chatbot
     - freemarker
+    - cliengo
   version:
     major: 1
     minor: 0
     patch: 0
-  description: "A plugin to add a chatbot to a site. Instructions are at https://github.com/craftercms/chatbot-plugin#readme"
+  description: "A plugin to add Cliengo to a site. Instructions are at https://github.com/craftercms/chatbot-plugin/tree/cliengo#readme"
   website:
-    name: Web Chatbot Plugin
-    url: https://github.com/craftercms/chatbot-plugin
+    name: Cliengo Plugin
+    url: https://github.com/craftercms/chatbot-plugin/tree/cliengo
   media:
     screenshots:
-      - title: Web Chatbot Plugin
-        description: Web Chatbot Plugin
-        url: https://raw.githubusercontent.com/craftercms/chatbot-plugin/master/.crafter/cover.png
+      - title: Cliengo Plugin
+        description: Cliengo Plugin
+        url: https://raw.githubusercontent.com/craftercms/chatbot-plugin/cliengo/.crafter/cover.png
   developer:
     company:
       name: Crafter Software
