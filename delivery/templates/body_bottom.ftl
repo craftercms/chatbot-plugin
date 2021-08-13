@@ -22,7 +22,12 @@
   ~ SOFTWARE.
   -->
 
-<@crafter.ifChatbotEnabled>
-  <#-- If so include the markup for the given provider -->
-  <#include "/templates/plugins/org/craftercms/plugin/chatbot/" + provider + "/body_bottom.ftl" ignore_missing=true/>
-</@crafter.ifChatbotEnabled>
+<#-- Check if the plugin is enabled -->
+<#if siteConfig.getBoolean('plugins.collectChat.enabled', !modePreview)>
+  <#-- Check if the current item has the override property -->
+  <#if (!(contentModel.disableCollectChat_b)!false) >
+    <#-- Get the provider to use from the site configuration -->
+    <#assign id = siteConfig.getString('plugins.collectChat.id') />
+    <script>(function(w, d) { w.CollectId = "${id}"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+  </#if>
+</#if>
