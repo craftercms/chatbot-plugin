@@ -21,8 +21,18 @@
   ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   ~ SOFTWARE.
   -->
-
-<@crafter.ifChatbotEnabled>
-  <#-- If so include the markup for the given provider -->
-  <#include "/templates/plugins/org/craftercms/plugin/chatbot/" + provider + "/body_bottom.ftl" ignore_missing=true/>
-</@crafter.ifChatbotEnabled>
+<#-- Check if the plugin is enabled -->
+<#if siteConfig.getBoolean('plugins.cliengo.enabled', !modePreview)>
+  <#-- Check if the current item has the override property -->
+  <#if (!(contentModel.disableCliengo_b)!false) >
+    <#assign token = siteConfig.getString('plugins.cliengo.token') />
+    <script type="text/javascript">(function () {
+    var ldk = document.createElement('script');
+    ldk.type = 'text/javascript';
+    ldk.async = true;
+    ldk.src = https://s.cliengo.com/weboptimizer/${token?replace("-", "/")}.js;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ldk, s);
+    })();</script>
+  </#if>
+</#if>
