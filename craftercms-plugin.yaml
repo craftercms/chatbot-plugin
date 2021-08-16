@@ -26,25 +26,26 @@ descriptorVersion: 2
 # Describe the plugin
 plugin:
   type: site
-  id: org.craftercms.plugin.chatbot
-  name: Web Chatbot Plugin
+  id: org.craftercms.plugin.tidio
+  name: Tidio Plugin
   tags:
     - web
     - chatbot
     - freemarker
+    - tidio
   version:
     major: 1
     minor: 0
     patch: 0
-  description: "A plugin to add a chatbot to a site. Instructions are at https://github.com/craftercms/chatbot-plugin#readme"
+  description: "A plugin to add Tidio to a site. Instructions are at https://github.com/craftercms/chatbot-plugin/tree/tidio#readme"
   website:
-    name: Web Chatbot Plugin
-    url: https://github.com/craftercms/chatbot-plugin
+    name: Tidio Plugin
+    url: https://github.com/craftercms/chatbot-plugin/tree/tidio
   media:
     screenshots:
-      - title: Web Chatbot Plugin
-        description: Web Chatbot Plugin
-        url: https://raw.githubusercontent.com/craftercms/chatbot-plugin/master/.crafter/cover.png
+      - title: Tidio Plugin
+        description: Tidio Plugin
+        url: https://raw.githubusercontent.com/craftercms/chatbot-plugin/tidio/.crafter/cover.png
   developer:
     company:
       name: Crafter Software

@@ -22,7 +22,11 @@
   ~ SOFTWARE.
   -->
 
-<@crafter.ifChatbotEnabled>
-  <#-- If so include the markup for the given provider -->
-  <#include "/templates/plugins/org/craftercms/plugin/chatbot/" + provider + "/body_bottom.ftl" ignore_missing=true/>
-</@crafter.ifChatbotEnabled>
+<#-- Check if the plugin is enabled -->
+<#if siteConfig.getBoolean('plugins.chatbot.enabled', !modePreview)>
+  <#-- Check if the current item has the override property -->
+  <#if (!(contentModel.disableChatbot_b)!false) >
+    <#assign id = siteConfig.getString('plugins.chatbot.settings.id') />
+    <script src="//code.tidio.co/${id}.js" async></script>
+  </#if>
+</#if>
