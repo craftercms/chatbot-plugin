@@ -22,20 +22,13 @@
   ~ SOFTWARE.
   -->
 
-<#macro ifChatbotEnabled>
+<#macro ifQuiqEnabled>
   <#-- Check if the plugin is enabled -->
-  <#if siteConfig.getBoolean('plugins.chatbot.enabled', !modePreview)>
+  <#if siteConfig.getBoolean('plugins.quiq.enabled', !modePreview)>
     <#-- Check if the current item has the override property -->
-    <#if (!(contentModel.disableChatbot_b)!false) >
-      <#-- Get the provider to use from the site configuration -->
-      <#assign provider = siteConfig.getString('plugins.chatbot.provider', 'noop')/>
+    <#if (!(contentModel.disableQuiq_b)!false) >
       <#-- Execute the given markup -->
       <#nested/>
     </#if>
   </#if>
 </#macro>
-
-<@ifChatbotEnabled>
-  <#-- If so include the markup for the given provider -->
-  <#include "/templates/plugins/org/craftercms/plugin/chatbot/" + provider + "/definitions.ftl" ignore_missing=true/>
-</@ifChatbotEnabled>

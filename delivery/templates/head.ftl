@@ -22,7 +22,7 @@
   ~ SOFTWARE.
   -->
 
-<@crafter.ifChatbotEnabled>
-  <#-- If so include the markup for the given provider -->
-  <#include "/templates/plugins/org/craftercms/plugin/chatbot/" + provider + "/head.ftl" ignore_missing=true/>
-</@crafter.ifChatbotEnabled>
+<@crafter.ifQuiqEnabled>
+  <#assign tenant = siteConfig.getString("plugin.quiq.tenant")/>
+  <script src="https://${tenant}.quiq-api.com/app/webchat/index.js" charset="UTF-8"></script>
+</@crafter.ifQuiqEnabled>
