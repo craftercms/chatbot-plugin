@@ -22,7 +22,11 @@
   ~ SOFTWARE.
   -->
 
-<@crafter.ifChatbotEnabled>
-  <#-- If so include the markup for the given provider -->
-  <#include "/templates/plugins/org/craftercms/plugin/chatbot/" + provider + "/body_bottom.ftl" ignore_missing=true/>
-</@crafter.ifChatbotEnabled>
+<@crafter.ifQuiqEnabled>
+  <#assign contactPoint = siteConfig.getString("plugin.quiq.contactPoint", "default")/>
+  <script>
+  var chat = Quiq({
+    contactPoint: '${contactPoint}'
+  });
+  </script>
+</@crafter.ifQuiqEnabled>
