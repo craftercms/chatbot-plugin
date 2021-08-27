@@ -36,8 +36,9 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 0
-  description: "A plugin to add Collect.chat to a site. Instructions are at https://github.com/craftercms/chatbot-plugin/tree/collect.chat#readme"
+    patch: 1
+  description: A plugin to add Collect.chat to a site
+  documentation: "https://raw.githubusercontent.com/craftercms/chatbot-plugin/collect.chat/readme.md"
   website:
     name: Collect.chat Plugin
     url: https://github.com/craftercms/chatbot-plugin/tree/collect.chat
