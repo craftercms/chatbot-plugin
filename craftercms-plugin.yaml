@@ -36,8 +36,9 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 0
-  description: "A plugin to add Quiq to a site. Instructions are at https://github.com/craftercms/chatbot-plugin/tree/quiq#readme"
+    patch: 1
+  description: A plugin to add Quiq to a site
+  documentation: "https://raw.githubusercontent.com/craftercms/chatbot-plugin/quiq/readme.md"
   website:
     name: Quiq Plugin
     url: https://github.com/craftercms/chatbot-plugin/tree/quiq
