@@ -36,8 +36,9 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 0
-  description: "A plugin to add Tidio to a site. Instructions are at https://github.com/craftercms/chatbot-plugin/tree/tidio#readme"
+    patch: 1
+  description: A plugin to add Tidio to a site
+  documentation: "https://raw.githubusercontent.com/craftercms/chatbot-plugin/tidio/readme.md"
   website:
     name: Tidio Plugin
     url: https://github.com/craftercms/chatbot-plugin/tree/tidio
