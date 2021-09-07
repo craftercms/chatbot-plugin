@@ -26,25 +26,27 @@ descriptorVersion: 2
 # Describe the plugin
 plugin:
   type: site
-  id: org.craftercms.plugin.chatbot
-  name: Web Chatbot Plugin
+  id: org.craftercms.plugin.liveagent
+  name: LiveAgent Plugin
   tags:
     - web
     - chatbot
     - freemarker
+    - liveagent
   version:
     major: 1
     minor: 0
     patch: 0
-  description: "A plugin to add a chatbot to a site. Instructions are at https://github.com/craftercms/chatbot-plugin#readme"
+  description: A plugin to add LiveAgent to a site
+  documentation: "https://raw.githubusercontent.com/craftercms/chatbot-plugin/liveagent/readme.md"
   website:
-    name: Web Chatbot Plugin
-    url: https://github.com/craftercms/chatbot-plugin
+    name: LiveAgent Plugin
+    url: https://github.com/craftercms/chatbot-plugin/tree/liveagent
   media:
     screenshots:
-      - title: Web Chatbot Plugin
-        description: Web Chatbot Plugin
-        url: https://raw.githubusercontent.com/craftercms/chatbot-plugin/master/.crafter/cover.png
+      - title: LiveAgent Plugin
+        description: LiveAgent Plugin
+        url: https://raw.githubusercontent.com/craftercms/chatbot-plugin/liveagent/.crafter/cover.png
   developer:
     company:
       name: Crafter Software
@@ -52,7 +54,7 @@ plugin:
       url: https://craftersoftware.com
   build:
     id: c3d2a5444e6a24b5e0481d6ba87901d0b02716c8
-    date: 2021-08-06T00:00:00Z
+    date: 2021-09-07T00:00:00Z
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
