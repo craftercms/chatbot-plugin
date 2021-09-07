@@ -21,8 +21,22 @@
   ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   ~ SOFTWARE.
   -->
-
-<@crafter.ifChatbotEnabled>
-  <#-- If so include the markup for the given provider -->
-  <#include "/templates/plugins/org/craftercms/plugin/chatbot/" + provider + "/body_bottom.ftl" ignore_missing=true/>
-</@crafter.ifChatbotEnabled>
+<#-- Check if the plugin is enabled -->
+<#if siteConfig.getBoolean('plugins.liveAgent.enabled', !modePreview)>
+  <#-- Check if the current item has the override property -->
+  <#if (!(contentModel.disableLiveAgent_b)!false) >
+    <#assign id = siteConfig.getString('plugins.liveAgent.id', '') />
+    <#assign company = siteConfig.getString('plugins.liveAgent.companyName', '') />
+    <#assign button = siteConfig.getString('plugins.liveAgent.buttonId', '') />
+    <#if id?has_content && company?has_content>
+      <script type="text/javascript">
+  (function(d, src, c) { var t=d.scripts[d.scripts.length - 1],s=d.createElement('script');s.id='${id}';s.async=true;s.src=src;s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs&&(rs!='complete')&&(rs!='loaded')){return;}c(this);};t.parentElement.insertBefore(s,t.nextSibling);})(document,
+  'https://${company}.ladesk.com/scripts/track.js',
+  function(e){ <#if button?has_content>LiveAgent.createButton('${button}', e);</#if> });
+  </script>
+    <#else>
+      <div>The LiveAgent plugin is not properly configured, please follow the
+      <a target="_blank" href="https://github.com/craftercms/googlemaps-plugin#setup">instructions</a>.</div>
+    </#if>
+  </#if>
+</#if>
