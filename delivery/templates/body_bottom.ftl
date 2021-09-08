@@ -21,8 +21,18 @@
   ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   ~ SOFTWARE.
   -->
-
-<@crafter.ifChatbotEnabled>
-  <#-- If so include the markup for the given provider -->
-  <#include "/templates/plugins/org/craftercms/plugin/chatbot/" + provider + "/body_bottom.ftl" ignore_missing=true/>
-</@crafter.ifChatbotEnabled>
+<#-- Check if the plugin is enabled -->
+<#if siteConfig.getBoolean('plugins.hubSpotChat.enabled', !modePreview)>
+  <#-- Check if the current item has the override property -->
+  <#if (!(contentModel.disableHubSpotChat_b)!false) >
+    <#assign id = siteConfig.getString('plugins.hubSpotChat.id', '') />
+    <#if id?has_content>
+      <!-- Start of HubSpot Embed Code -->
+      <script type="text/javascript" id="hs-script-loader" async defer src="https://js-na1.hs-scripts.com/${id}.js"></script>
+      <!-- End of HubSpot Embed Code -->
+    <#else>
+      <div>The HubSpot Chat plugin is not properly configured, please follow the
+      <a target="_blank" href="https://github.com/craftercms/chatbot-plugin/tree/hubspot#setup">instructions</a>.</div>
+    </#if>
+  </#if>
+</#if>
