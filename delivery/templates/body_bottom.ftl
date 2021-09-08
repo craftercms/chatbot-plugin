@@ -21,8 +21,24 @@
   ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   ~ SOFTWARE.
   -->
-
-<@crafter.ifChatbotEnabled>
-  <#-- If so include the markup for the given provider -->
-  <#include "/templates/plugins/org/craftercms/plugin/chatbot/" + provider + "/body_bottom.ftl" ignore_missing=true/>
-</@crafter.ifChatbotEnabled>
+<#-- Check if the plugin is enabled -->
+<#if siteConfig.getBoolean('plugins.freshdesk.enabled', !modePreview)>
+  <#-- Check if the current item has the override property -->
+  <#if (!(contentModel.disableFreshdesk_b)!false) >
+    <#assign token = siteConfig.getString('plugins.freshdesk.token', '') />
+    <#if token?has_content>
+      <script>
+        function initFreshChat() {
+          window.fcWidget.init({
+            token: "${token}",
+            host: "https://wchat.freshchat.com"
+          });
+        }
+        function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"Freshdesk Messaging-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+      </script>
+    <#else>
+      <div>The Freshdesk plugin is not properly configured, please follow the
+      <a target="_blank" href="https://github.com/craftercms/chatbot-plugin/tree/freshdesk#setup">instructions</a>.</div>
+    </#if>
+  </#if>
+</#if>
