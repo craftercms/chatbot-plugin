@@ -21,8 +21,29 @@
   ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   ~ SOFTWARE.
   -->
-
-<@crafter.ifChatbotEnabled>
-  <#-- If so include the markup for the given provider -->
-  <#include "/templates/plugins/org/craftercms/plugin/chatbot/" + provider + "/body_bottom.ftl" ignore_missing=true/>
-</@crafter.ifChatbotEnabled>
+<#-- Check if the plugin is enabled -->
+<#if siteConfig.getBoolean('plugins.olark.enabled', !modePreview)>
+  <#-- Check if the current item has the override property -->
+  <#if (!(contentModel.disableOlark_b)!false) >
+    <#assign id = siteConfig.getString('plugins.olark.id', '') />
+    <#if id?has_content>
+      <!-- begin olark code -->
+      <script type="text/javascript" async>
+       ;(function(o,l,a,r,k,y){if(o.olark)return;
+       r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0];
+       y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r);
+       y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};
+       y.extend=function(i,j){y("extend",i,j)};
+       y.identify=function(i){y("identify",k.i=i)};
+       y.configure=function(i,j){y("configure",i,j);k.c[i]=j};
+       k=y._={s:[],t:[+new Date],c:{},l:a};
+       })(window,document,"static.olark.com/jsclient/loader.js");
+       /* Add configuration calls below this comment */
+       olark.identify('${id}');</script>
+      <!-- end olark code -->
+    <#else>
+      <div>The Olark plugin is not properly configured, please follow the
+      <a target="_blank" href="https://github.com/craftercms/chatbot-plugin/tree/olark#setup">instructions</a>.</div>
+    </#if>
+  </#if>
+</#if>
