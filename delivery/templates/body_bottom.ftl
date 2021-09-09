@@ -21,8 +21,16 @@
   ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   ~ SOFTWARE.
   -->
-
-<@crafter.ifChatbotEnabled>
-  <#-- If so include the markup for the given provider -->
-  <#include "/templates/plugins/org/craftercms/plugin/chatbot/" + provider + "/body_bottom.ftl" ignore_missing=true/>
-</@crafter.ifChatbotEnabled>
+<#-- Check if the plugin is enabled -->
+<#if siteConfig.getBoolean('plugins.userlike.enabled', !modePreview)>
+  <#-- Check if the current item has the override property -->
+  <#if (!(contentModel.disableUserlike_b)!false) >
+    <#assign widgetKey = siteConfig.getString('plugins.userlike.widgetKey', '') />
+    <#if widgetKey?has_content>
+      <script type="text/javascript" async src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/${widgetKey}.js"></script>
+    <#else>
+      <div>The Userlike plugin is not properly configured, please follow the
+      <a target="_blank" href="https://github.com/craftercms/chatbot-plugin/tree/userlike#setup">instructions</a>.</div>
+    </#if>
+  </#if>
+</#if>
