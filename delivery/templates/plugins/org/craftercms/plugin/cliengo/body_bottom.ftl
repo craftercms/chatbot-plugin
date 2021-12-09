@@ -22,10 +22,10 @@
   ~ SOFTWARE.
   -->
 <#-- Check if the plugin is enabled -->
-<#if siteConfig.getBoolean('plugins.cliengo.enabled', !modePreview)>
+<#if pluginConfig.getBoolean('enabled', !modePreview)>
   <#-- Check if the current item has the override property -->
   <#if (!(contentModel.disableCliengo_b)!false) >
-    <#assign token = siteConfig.getString('plugins.cliengo.token') />
+    <#assign token = pluginConfig.getString('token') />
     <script type="text/javascript">(function () {
     var ldk = document.createElement('script');
     ldk.type = 'text/javascript';
