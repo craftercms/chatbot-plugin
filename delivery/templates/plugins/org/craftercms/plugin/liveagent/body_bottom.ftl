@@ -22,12 +22,12 @@
   ~ SOFTWARE.
   -->
 <#-- Check if the plugin is enabled -->
-<#if siteConfig.getBoolean('plugins.liveAgent.enabled', !modePreview)>
+<#if pluginConfig.getBoolean('enabled', !modePreview)>
   <#-- Check if the current item has the override property -->
   <#if (!(contentModel.disableLiveAgent_b)!false) >
-    <#assign id = siteConfig.getString('plugins.liveAgent.id', '') />
-    <#assign company = siteConfig.getString('plugins.liveAgent.companyName', '') />
-    <#assign button = siteConfig.getString('plugins.liveAgent.buttonId', '') />
+    <#assign id = pluginConfig.getString('id', '') />
+    <#assign company = pluginConfig.getString('companyName', '') />
+    <#assign button = pluginConfig.getString('buttonId', '') />
     <#if id?has_content && company?has_content>
       <script type="text/javascript">
   (function(d, src, c) { var t=d.scripts[d.scripts.length - 1],s=d.createElement('script');s.id='${id}';s.async=true;s.src=src;s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs&&(rs!='complete')&&(rs!='loaded')){return;}c(this);};t.parentElement.insertBefore(s,t.nextSibling);})(document,
