@@ -36,7 +36,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 0
+    patch: 1
   description: A plugin to add Olark to a site
   documentation: "https://raw.githubusercontent.com/craftercms/chatbot-plugin/olark/readme.md"
   website:
@@ -65,3 +65,11 @@ plugin:
   crafterCmsEditions:
     - community
     - enterprise
+  parameters:
+    - label: Olark ID
+      name: id
+      description: The Olark ID
+    - label: Enable in Preview
+      name: enabled
+      description: Indicates if the Olark plugin should be added in preview mode, defaults to false
+      required: false
