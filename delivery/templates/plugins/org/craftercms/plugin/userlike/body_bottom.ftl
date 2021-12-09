@@ -22,10 +22,10 @@
   ~ SOFTWARE.
   -->
 <#-- Check if the plugin is enabled -->
-<#if siteConfig.getBoolean('plugins.userlike.enabled', !modePreview)>
+<#if pluginConfig.getBoolean('enabled', !modePreview)>
   <#-- Check if the current item has the override property -->
   <#if (!(contentModel.disableUserlike_b)!false) >
-    <#assign widgetKey = siteConfig.getString('plugins.userlike.widgetKey', '') />
+    <#assign widgetKey = pluginConfig.getString('widgetKey', '') />
     <#if widgetKey?has_content>
       <script type="text/javascript" async src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/${widgetKey}.js"></script>
     <#else>
