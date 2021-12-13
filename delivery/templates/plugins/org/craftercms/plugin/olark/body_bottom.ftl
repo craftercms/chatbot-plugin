@@ -22,10 +22,10 @@
   ~ SOFTWARE.
   -->
 <#-- Check if the plugin is enabled -->
-<#if siteConfig.getBoolean('plugins.olark.enabled', !modePreview)>
+<#if pluginConfig.getBoolean('enabled', !modePreview)>
   <#-- Check if the current item has the override property -->
   <#if (!(contentModel.disableOlark_b)!false) >
-    <#assign id = siteConfig.getString('plugins.olark.id', '') />
+    <#assign id = pluginConfig.getString('id', '') />
     <#if id?has_content>
       <!-- begin olark code -->
       <script type="text/javascript" async>
