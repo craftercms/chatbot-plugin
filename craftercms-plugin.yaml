@@ -36,7 +36,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 0
+    patch: 2
   description: A plugin to add LiveAgent to a site
   documentation: "https://raw.githubusercontent.com/craftercms/chatbot-plugin/liveagent/readme.md"
   website:
@@ -65,3 +65,18 @@ plugin:
   crafterCmsEditions:
     - community
     - enterprise
+  parameters:
+    - label: LiveAgent ID
+      name: id
+      description: The LiveAgent ID
+    - label: Company Name
+      name: companyName
+      description: The name of the company in LiveAgent
+    - label: Button ID
+      name: buttonId
+      description:  The ID of the button to add
+      required: false
+    - label: Enable in Preview
+      name: enabled
+      description: Indicates if the LiveAgent plugin should be added in preview mode, defaults to false
+      required: false
