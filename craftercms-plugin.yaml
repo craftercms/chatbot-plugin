@@ -36,7 +36,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 1
+    patch: 2
   description: A plugin to add Tidio to a site
   documentation: "https://raw.githubusercontent.com/craftercms/chatbot-plugin/tidio/readme.md"
   website:
@@ -65,3 +65,11 @@ plugin:
   crafterCmsEditions:
     - community
     - enterprise
+  parameters:
+    - label: Tidio ID
+      name: id
+      description: The Tidio filename for the chatbot (without the extension)
+    - label: Enable in Preview
+      name: enabled
+      description: Indicates if the Tidio plugin should be added in preview mode, defaults to false
+      required: false

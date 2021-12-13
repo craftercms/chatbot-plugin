@@ -23,10 +23,10 @@
   -->
 
 <#-- Check if the plugin is enabled -->
-<#if siteConfig.getBoolean('plugins.chatbot.enabled', !modePreview)>
+<#if pluginConfig.getBoolean('enabled', !modePreview)>
   <#-- Check if the current item has the override property -->
   <#if (!(contentModel.disableChatbot_b)!false) >
-    <#assign id = siteConfig.getString('plugins.chatbot.settings.id') />
+    <#assign id = pluginConfig.getString('id') />
     <script src="//code.tidio.co/${id}.js" async></script>
   </#if>
 </#if>
