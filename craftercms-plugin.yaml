@@ -36,7 +36,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 1
+    patch: 2
   description: A plugin to add LivePerson to a site
   documentation: "https://raw.githubusercontent.com/craftercms/chatbot-plugin/liveperson/readme.md"
   website:
@@ -65,3 +65,11 @@ plugin:
   crafterCmsEditions:
     - community
     - enterprise
+  parameters:
+    - label: Account Number
+      name: accountNumber
+      description: Your LivePerson account number
+    - label: Enable in Preview
+      name: enabled
+      description: Indicates if the LivePerson plugin should be added in preview mode, defaults to false
+      required: false
