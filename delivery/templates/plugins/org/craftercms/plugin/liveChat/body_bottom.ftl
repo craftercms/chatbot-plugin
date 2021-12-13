@@ -23,10 +23,10 @@
   -->
 
 <#-- Check if the plugin is enabled -->
-<#if siteConfig.getBoolean('plugins.liveChat.enabled', !modePreview)>
+<#if pluginConfig.getBoolean('enabled', !modePreview)>
   <#-- Check if the current item has the override property -->
   <#if (!(contentModel.disableLiveChat_b)!false) >
-  <#assign license = siteConfig.getString('plugins.liveChat.license') />
+  <#assign license = pluginConfig.getString('license') />
   <!-- Start of LiveChat (www.livechat.com) code -->
   <script>
   window.__lc = window.__lc || {};

@@ -36,7 +36,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 0
+    patch: 1
   description: "A plugin to add LiveChat to a site. Instructions are at https://github.com/craftercms/chatbot-plugin/tree/livechat#readme"
   website:
     name: LiveChat Plugin
@@ -64,3 +64,11 @@ plugin:
   crafterCmsEditions:
     - community
     - enterprise
+  parameters:
+    - label: License Number
+      name: license
+      description: The license number from LiveChat
+    - label: Enable in Preview
+      name: enabled
+      description: Indicates if the LiveChat plugin should be added in preview mode, defaults to false
+      required: false
