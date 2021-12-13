@@ -24,7 +24,7 @@
 
 <#macro ifQuiqEnabled>
   <#-- Check if the plugin is enabled -->
-  <#if siteConfig.getBoolean('plugins.quiq.enabled', !modePreview)>
+  <#if pluginConfig.getBoolean('enabled', !modePreview)>
     <#-- Check if the current item has the override property -->
     <#if (!(contentModel.disableQuiq_b)!false) >
       <#-- Execute the given markup -->

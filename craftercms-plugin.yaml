@@ -36,7 +36,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 1
+    patch: 2
   description: A plugin to add Quiq to a site
   documentation: "https://raw.githubusercontent.com/craftercms/chatbot-plugin/quiq/readme.md"
   website:
@@ -65,3 +65,15 @@ plugin:
   crafterCmsEditions:
     - community
     - enterprise
+  parameters:
+    - label: Tenant
+      name: tenant
+      description: Name of your Quiq tenant
+    - label: Contact Point
+      name: contactPoint
+      description: Name of your Quiq contact point, defaults to `default`
+      required: false
+    - label: Enable in Preview
+      name: enabled
+      description: Indicates if the Quiq plugin should be added in preview mode, defaults to false
+      required: false

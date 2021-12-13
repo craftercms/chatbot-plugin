@@ -23,6 +23,10 @@
   -->
 
 <@crafter.ifQuiqEnabled>
-  <#assign tenant = siteConfig.getString("plugin.quiq.tenant")/>
-  <script src="https://${tenant}.quiq-api.com/app/webchat/index.js" charset="UTF-8"></script>
+  <#assign contactPoint = pluginConfig.getString("contactPoint", "default")/>
+  <script>
+  var chat = Quiq({
+    contactPoint: '${contactPoint}'
+  });
+  </script>
 </@crafter.ifQuiqEnabled>
