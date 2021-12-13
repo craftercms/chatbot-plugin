@@ -36,7 +36,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 0
+    patch: 1
   description: A plugin to add Userlike to a site
   documentation: "https://raw.githubusercontent.com/craftercms/chatbot-plugin/userlike/readme.md"
   website:
@@ -65,3 +65,11 @@ plugin:
   crafterCmsEditions:
     - community
     - enterprise
+  parameters:
+    - label: Widget Key
+      name: widgetKey
+      description:  The Userlike widget key
+    - label: Enable in Preview
+      name: enabled
+      description: Indicates if the Userlike plugin should be added in preview mode, defaults to false
+      required: false
