@@ -22,10 +22,10 @@
   ~ SOFTWARE.
   -->
 <#-- Check if the plugin is enabled -->
-<#if siteConfig.getBoolean('plugins.hubSpotChat.enabled', !modePreview)>
+<#if pluginConfig.getBoolean('enabled', !modePreview)>
   <#-- Check if the current item has the override property -->
   <#if (!(contentModel.disableHubSpotChat_b)!false) >
-    <#assign id = siteConfig.getString('plugins.hubSpotChat.id', '') />
+    <#assign id = pluginConfig.getString('id', '') />
     <#if id?has_content>
       <!-- Start of HubSpot Embed Code -->
       <script type="text/javascript" id="hs-script-loader" async defer src="https://js-na1.hs-scripts.com/${id}.js"></script>

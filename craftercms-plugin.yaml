@@ -36,7 +36,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 0
+    patch: 1
   description: A plugin to add HubSpot Chat to a site
   documentation: https://raw.githubusercontent.com/craftercms/chatbot-plugin/hubspot/readme.md
   website:
@@ -65,3 +65,11 @@ plugin:
   crafterCmsEditions:
     - community
     - enterprise
+  parameters:
+    - label: Account ID
+      name: id
+      description: The HubSpot account ID
+    - label: Enable in Preview
+      name: enabled
+      description: Indicates if the HubSpot plugin should be added in preview mode, defaults to false
+      required: false
