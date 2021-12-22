@@ -22,10 +22,10 @@
   ~ SOFTWARE.
   -->
 <#-- Check if the plugin is enabled -->
-<#if siteConfig.getBoolean('plugins.freshdesk.enabled', !modePreview)>
+<#if pluginConfig.getBoolean('enabled', !modePreview)>
   <#-- Check if the current item has the override property -->
   <#if (!(contentModel.disableFreshdesk_b)!false) >
-    <#assign token = siteConfig.getString('plugins.freshdesk.token', '') />
+    <#assign token = pluginConfig.getString('token', '') />
     <#if token?has_content>
       <script>
         function initFreshChat() {

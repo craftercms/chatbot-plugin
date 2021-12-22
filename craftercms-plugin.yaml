@@ -36,7 +36,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 1
+    patch: 2
   description: A plugin to add Freshdesk to a site
   documentation: "https://raw.githubusercontent.com/craftercms/chatbot-plugin/freshdesk/readme.md"
   website:
@@ -65,3 +65,11 @@ plugin:
   crafterCmsEditions:
     - community
     - enterprise
+  parameters:
+    - label: Token
+      name: token
+      description: The Freshdesk token
+    - label: Enable in Preview
+      name: enabled
+      description: Indicates if the Freshdesk plugin should be added in preview mode, defaults to false
+      required: false
