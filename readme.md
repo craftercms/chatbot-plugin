@@ -1,39 +1,19 @@
-# Freshdesk Plugin for Crafter CMS
+# Freshdesk Plugin for CrafterCMS
 
 This is a plugin to add Freshdesk to your site.
 
 # Installation
 
-The plugin can be installed to your site from the Crafter CMS Marketplace
+The plugin can be installed to your site from the CrafterCMS Marketplace
 
 # Setup
 
-After the plugin has been installed you can enable it by adding the following snippet in your site configuration:
+The following parameters can be provided during the plugin installation:
 
-```xml
-<plugins>
-  <freshdesk>
-    <enabled>...</enabled>
-    <token>...</token>
-  </freshdesk>
-</plugins>
-```
-
-# Configuration
-
-- `enabled`: Indicates if the Freshdesk plugin should be added to all pages, defaults to `false` if the site is running
-  in preview mode, `true` otherwise
+- `enabled`: Indicates if the Freshdesk plugin should be added to all pages, defaults to `false` in preview mode
 - `token`: The Freshdesk token
 
-Example:
-
-```xml
-<plugins>
-  <freshdesk>
-    <token>XXXXXX</token>
-  </freshdesk>
-</plugins>
-```
+After installation the configuration can be updated from the Plugin Management section in Crafter Studio
 
 # Page Override
 
