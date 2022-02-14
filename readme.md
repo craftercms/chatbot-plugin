@@ -1,39 +1,19 @@
-# Olark Plugin for Crafter CMS
+# Olark Plugin for CrafterCMS
 
 This is a plugin to add Olark to your site.
 
 # Installation
 
-The plugin can be installed to your site from the Crafter CMS Marketplace
+The plugin can be installed to your site from the CrafterCMS Marketplace
 
 # Setup
 
-After the plugin has been installed you can enable it by adding the following snippet in your site configuration:
+The following parameters can be provided during the plugin installation:
 
-```xml
-<plugins>
-  <olark>
-    <enabled>...</enabled>
-    <id>...</id>
-  </olark>
-</plugins>
-```
-
-# Configuration
-
-- `enabled`: Indicates if the Olark plugin should be added to all pages, defaults to `false` if the site is running
-  in preview mode, `true` otherwise
+- `enabled`: Indicates if the Olark plugin should be added to all pages, defaults to `false` in preview
 - `id`: The Olark ID
 
-Example:
-
-```xml
-<plugins>
-  <olark>
-    <id>XXXX</id>
-  </olark>
-</plugins>
-```
+After installation the configuration can be updated from the Plugin Management section in Crafter Studio
 
 # Page Override
 
