@@ -1,41 +1,19 @@
-# LivePerson Plugin for Crafter CMS
+# LivePerson Plugin for CrafterCMS
 
 This is a plugin to add LivePerson to your site.
 
 # Installation
 
-The plugin can be installed to your site from the Crafter CMS Marketplace
+The plugin can be installed to your site from the CrafterCMS Marketplace
 
 # Setup
 
-After the plugin has been installed you can enable it by adding the following snippet in your
-`Engine Site Configuration` file:
+The following parameters can be provided during the plugin installation:
 
-```xml
-<plugins>
-  <livePerson>
-    <enabled>...</enabled>
-    <accountNumber>XXXXXXXX</accountNumber>
-  </livePerson>
-</plugins>
-```
-
-# Configuration
-
-- `enabled`: Indicates if the LivePerson plugin should be added to all pages, defaults to `false` if the site is running
-  in preview mode, `true` otherwise
+- `enabled`: Indicates if the LivePerson plugin should be added to all pages, defaults to `false` in preview mode
 - `accountNumber`: Your LivePerson account number
 
-
-Example:
-
-```xml
-<plugins>
-  <livePerson>
-    <accountNumber>XXXXXXXX</accountNumber>
-  </livePerson>
-</plugins>
-```
+After installation the configuration can be updated from the Plugin Management section in Crafter Studio
 
 # Page Override
 
