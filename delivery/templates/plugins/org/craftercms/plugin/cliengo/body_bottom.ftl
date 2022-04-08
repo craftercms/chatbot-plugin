@@ -30,7 +30,7 @@
     var ldk = document.createElement('script');
     ldk.type = 'text/javascript';
     ldk.async = true;
-    ldk.src = https://s.cliengo.com/weboptimizer/${token?replace("-", "/")}.js;
+    ldk.src = 'https://s.cliengo.com/weboptimizer/${token?replace("-", "/")}.js';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(ldk, s);
     })();</script>
