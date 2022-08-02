@@ -35,7 +35,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 1
+    patch: 2
   description: "A plugin to add a chatbot to a site. Instructions are at https://github.com/craftercms/chatbot-plugin#readme"
   website:
     name: Web Chatbot Plugin
@@ -63,6 +63,9 @@ plugin:
     - major: 4
       minor: 0
       patch: 1
+    - major: 4
+      minor: 0
+      patch: 2
   crafterCmsEditions:
     - community
     - enterprise
