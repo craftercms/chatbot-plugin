@@ -36,7 +36,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 5
+    patch: 6
   description: A plugin to add Userlike to a site
   documentation: "https://raw.githubusercontent.com/craftercms/chatbot-plugin/userlike/readme.md"
   website:
@@ -65,6 +65,9 @@ plugin:
     - major: 4
       minor: 0
       patch: 2
+    - major: 4
+      minor: 0
+      patch: 3
   crafterCmsEditions:
     - community
     - enterprise
