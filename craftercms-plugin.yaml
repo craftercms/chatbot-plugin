@@ -36,7 +36,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 9
+    patch: 10
   description: A plugin to add Quiq to a site
   documentation: "https://raw.githubusercontent.com/craftercms/chatbot-plugin/quiq/readme.md"
   website:
@@ -83,6 +83,24 @@ plugin:
     - major: 4
       minor: 1
       patch: 1
+    - major: 4
+      minor: 1
+      patch: 2
+    - major: 4
+      minor: 1
+      patch: 3
+    - major: 4
+      minor: 1
+      patch: 4
+    - major: 4
+      minor: 2
+      patch: 0
+    - major: 4
+      minor: 2
+      patch: 1
+    - major: 4
+      minor: 2
+      patch: 2
   crafterCmsEditions:
     - community
     - enterprise
