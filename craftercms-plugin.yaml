@@ -36,7 +36,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 14
+    patch: 15
   description: "A plugin to add LiveChat to a site. Instructions are at https://github.com/craftercms/chatbot-plugin/tree/livechat#readme"
   website:
     name: LiveChat Plugin
@@ -63,6 +63,8 @@ plugin:
       minor: 2
     - major: 4
       minor: 3
+    - major: 4
+      minor: 4
     - major: 5
       minor: 0
   crafterCmsEditions:
